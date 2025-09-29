@@ -18,7 +18,7 @@ html,body{
 }
 
 .nav > a {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -60,10 +60,10 @@ html,body{
     align-items: center;
     padding: 50px ;
 }
-.key { color: #c792ea; }      /* JSON keys */
-.string { color: #f78c6c; }   /* string values */
-.bracket { color: #ffffff; }  /* { } [ ] */
-.boolean { color: #89ddff; }  /* true/false */
+.key { color: #c792ea; }
+.string { color: #f78c6c; }
+.bracket { color: #ffffff; }
+.boolean { color: #89ddff; }
 
 
 .code-panel {
@@ -344,12 +344,11 @@ a.bt{
 }
 
 
-/* About Section */
 
 /* About Section */
 #about {
-  padding: 60px 20px;
-  
+  width: 100%;
+  padding: 60px 0px;
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -367,13 +366,19 @@ a.bt{
   line-height: 1.6;
 }
 
-/* Optional: Smooth scroll for anchor links */
+
+
 html {
   scroll-behavior: smooth;
 }
 
 
-
+#projects {
+  width: 100%;
+  padding: 200px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 
 .wrapper {
   width: 100%;
@@ -381,14 +386,17 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1200px; /* needed for 3D effect */
+  perspective: 1200px; 
+  
 }
 
-/* Inner container that rotates */
+
+
 .inner {
   --w: 120px; 
   --h: 180px;
-  --translateZ: 350px; /* pushes cards out to be visible */
+  --translateZ: 350px; 
+  
   width: var(--w);
   height: var(--h);
   position: relative;
@@ -396,13 +404,15 @@ html {
   animation: rotating 25s linear infinite;
 }
 
-/* Rotation animation */
+
+
 @keyframes rotating {
   from { transform: rotateY(0deg); }
   to { transform: rotateY(360deg); }
 }
 
-/* Each card */
+
+
 .card {
   width: var(--w);
   height: var(--h);
@@ -414,7 +424,8 @@ html {
   transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
 }
 
-/* Card background glow */
+
+
 .img {
   width: 100%;
   height: 100%;
@@ -442,10 +453,10 @@ html {
   justify-content: space-around;
 }
 .dying img {
-  width: 450px;   /* set the desired width */
-  height: 354px;   /* keeps aspect ratio */
-  display: block; /* removes inline spacing */
-  border-radius: 8px; /* optional, makes corners rounded */
+  width: 450px;   
+  height: 354px;   
+  display: block;
+  border-radius: 8px;
 }
 @media (max-width: 800px) {
   .dying img {
@@ -455,7 +466,8 @@ html {
 
 
 
-/* From Uiverse.io by PriyanshuGupta28 */ 
+
+
 .stepper-box {
   background-color: white;
   border-radius: 12px;
@@ -585,4 +597,435 @@ html {
   background-color: #0f172a;
   color: white;
   border-color: #0f172a;
+}
+
+
+
+
+/* Contact Section */
+ 
+#contact{
+  position: relative;
+  z-index: 3;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  height: 100%;
+}
+ 
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+ 
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+ 
+.section-header h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+ 
+.section-header p {
+  color: #FFF;
+}
+ 
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.contact-info {
+  width: 50%;
+}
+ 
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+ 
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  border-radius: 50%;
+}
+ 
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+ 
+.contact-info-content {
+  margin-left: 20px;
+}
+ 
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+ 
+.contact-info-content p {
+  color: #FFF;
+  font-size: 1em;
+}
+ 
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+ 
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+ 
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+ 
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+ 
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+ 
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+ 
+.contact-form .input-box input[type="submit"]
+{
+  width: 100%;
+  background: #00bcd4;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #00bcd4;
+  transition: 0.5s;
+}
+ 
+.contact-form .input-box input[type="submit"]:hover
+{
+  background: #FFF;
+  color: #00bcd4;
+}
+ 
+@media (max-width: 991px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+.ants {
+  fill: black;
+  width: 15px;
+  height: 25px;
+  position: absolute;
+}
+
+#ant1 {
+  left: 50%;
+  bottom: -60%;
+  animation: ant-1-animation 26s infinite;
+}
+
+#ant2 {
+  left: 0;
+  bottom: -50%;
+  animation: ant-2-animation 28s infinite;
+}
+
+#ant3 {
+  left: 100%;
+  bottom: -70%;
+  animation: ant-3-animation 19s infinite;
+  animation-delay: 1s;
+}
+
+#ant4 {
+  left: 0;
+  bottom: -50%;
+  animation: ant-2-animation 12s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes ant-1-animation {
+  0% {
+    left: 50%;
+    bottom: -60%;
+  }
+  10% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(0deg);
+  }
+  12% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-90deg);
+  }
+  18% {
+    transform: rotate(-90deg);
+  }
+  20% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-90deg);
+  }
+  22% {
+    transform: rotate(0);
+  }
+  32% {
+    transform: rotate(0);
+  }
+  38% {
+    left: 5%;
+    bottom: 87%;
+    transform: rotate(90deg);
+  }
+  50% {
+    left: 90%;
+    bottom: 87%;
+    transform: rotate(90deg);
+  }
+  55% {
+    left: 90%;
+    bottom: 87%;
+    transform: rotate(230deg);
+  }
+  72% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(230deg);
+  }
+  78% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  85% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  90% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 50%;
+    bottom: -60%;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes ant-2-animation {
+  0% {
+    left: 0;
+    bottom: -50%;
+    transform: rotate(45deg);
+  }
+  15% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(45deg);
+  }
+  18% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  28% {
+    left: 85%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  30% {
+    left: 85%;
+    bottom: 5%;
+    transform: rotate(0deg);
+  }
+  40% {
+    left: 85%;
+    bottom: 85%;
+    transform: rotate(0deg);
+  }
+  48% {
+    left: 85%;
+    bottom: 85%;
+    transform: rotate(-90deg);
+  }
+  58% {
+    left: 5%;
+    bottom: 85%;
+    transform: rotate(-90deg);
+  }
+  68% {
+    left: 5%;
+    bottom: 85%;
+    transform: rotate(-180deg);
+  }
+  79% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-180deg);
+  }
+  81% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-270deg);
+  }
+  88% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-270deg);
+  }
+  90% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-140deg);
+  }
+  100% {
+    left: 0%;
+    bottom: -50%;
+    transform: rotate(-140deg);
+  }
+}
+
+@keyframes ant-3-animation {
+  0% {
+    left: 100%;
+    bottom: -70%;
+    transform: rotate(-45deg);
+  }
+  15% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(-45deg);
+  }
+  18% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(-90deg);
+  }
+  28% {
+    left: -10%;
+    bottom: -15%;
+    transform: rotate(-90deg);
+  }
+  30% {
+    left: -10%;
+    bottom: -15%;
+    transform: rotate(0deg);
+  }
+  45% {
+    left: -10%;
+    bottom: 105%;
+    transform: rotate(0deg);
+  }
+  48% {
+    left: -10%;
+    bottom: 105%;
+    transform: rotate(90deg);
+  }
+  58% {
+    left: 105%;
+    bottom: 105%;
+    transform: rotate(90deg);
+  }
+  60% {
+    left: 105%;
+    bottom: 105%;
+    transform: rotate(180deg);
+  }
+  75% {
+    left: 105%;
+    bottom: -15%;
+    transform: rotate(180deg);
+  }
+  81% {
+    left: 105%;
+    bottom: -15%;
+    transform: rotate(270deg);
+  }
+  88% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(270deg);
+  }
+  90% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(180deg);
+  }
+  92% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(130deg);
+  }
+  100% {
+    left: 100%;
+    bottom: -70%;
+    transform: rotate(130deg);
+  }
 }
