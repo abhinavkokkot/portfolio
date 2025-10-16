@@ -638,9 +638,7 @@ html {
  
 .row  {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
  
 .contact-info {
@@ -670,6 +668,7 @@ html {
  
 .contact-info-content h4 {
   color: #1da9c0;
+  text-align: left;
   font-size: 1.4em;
   margin-bottom: 5px;
 }
